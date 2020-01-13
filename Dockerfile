@@ -1,4 +1,3 @@
-
 FROM python:3.6-slim-stretch
 
 RUN apt-get -y update

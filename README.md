@@ -9,6 +9,8 @@ Utilizes [pixelsort](https://github.com/satyarth/pixelsort), another project I a
 With Docker:
 
 ```bash
+git clone https://github.com/BernardZhao/lenssort.git
+cd lenssort
 docker-compose up
 # Make sure to include the -o flag, previews won't show up in the container.
 docker-compose run lenssort python -m lenssort examples/example1.jpg -m face -o example_result.png
@@ -17,8 +19,7 @@ docker-compose run lenssort python -m lenssort examples/example1.jpg -m face -o 
 Manually:
 
 Requires Python 3.6 >=.
-
-Make sure you have [dlib Python bindings](https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf) installed: 
+Make sure you have [dlib Python bindings](https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf) installed!
 
 ```bash
 git clone https://github.com/BernardZhao/lenssort.git
