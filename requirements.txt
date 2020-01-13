@@ -1,0 +1,7 @@
+Click
+dlib
+face-recognition
+face-recognition-models
+numpy
+Pillow
+pixelsort
