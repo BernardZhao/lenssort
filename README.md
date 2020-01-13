@@ -9,9 +9,9 @@ Utilizes [pixelsort](https://github.com/satyarth/pixelsort), another project I a
 With Docker:
 
 ```bash
-# Make sure to include the -o flag, previews won't show up in the container.
 docker-compose up
-docker-compose run lenssort python -m lenssort examples/example.jpg -m face -o example_result.png
+# Make sure to include the -o flag, previews won't show up in the container.
+docker-compose run lenssort python -m lenssort examples/example1.jpg -m face -o example_result.png
 ```
 
 Manually:
