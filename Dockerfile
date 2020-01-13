@@ -31,8 +31,7 @@ RUN cd ~ && \
     cd  dlib/ && \
     python3 setup.py install --yes USE_AVX_INSTRUCTIONS
 
-RUN cd ~ && \
-    mkdir -p lenssort && \
-    git clone https://github.com/BernardZhao/lenssort.git && \
-    cd lenssort/ && \
-    pip3 install -r requirements.txt
+WORKDIR /lenssort
+# COPY requirements.txt requirements.txt
+COPY . . 
+RUN pip3 install -r requirements.txt

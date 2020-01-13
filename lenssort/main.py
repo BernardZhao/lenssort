@@ -3,7 +3,7 @@ import face_recognition
 import os.path
 from pixelsort import pixelsort
 
-from gltch.masks import generate
+from lenssort.masks import generate
 
 
 def find_faces(file_path):
@@ -16,7 +16,7 @@ def find_faces(file_path):
         return face_recognition.face_landmarks(image), image
 
 
-def lensesort(file_path, mask, invert, angle):
+def lenssort(file_path, mask, invert, angle):
     name = os.path.basename(file_path)
     faces, image = find_faces(file_path)
     if not faces:

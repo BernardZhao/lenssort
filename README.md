@@ -6,6 +6,16 @@ Utilizes [pixelsort](https://github.com/satyarth/pixelsort), another project I a
 
 ## Usage
 
+With Docker:
+
+```bash
+# Make sure to include the -o flag, previews won't show up in the container.
+docker-compose up
+docker-compose run lenssort python -m lenssort examples/example.jpg -m face -o example_result.png
+```
+
+Manually:
+
 Requires Python 3.6 >=.
 
 Make sure you have [dlib Python bindings](https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf) installed: 
@@ -22,12 +32,6 @@ pip install -r requirements.txt
 
 python -m lenssort %PathToImage% [mask_type] [params]
 ```
-
-Or, if you would rather use Docker:
-
-```bash
-```
-
 
 ### Mask types:
 
@@ -51,34 +55,34 @@ Output path | `-o`	| File output path. Previews image if not provided.
 
 ## Examples
 
-`python -m lenssort examples/example1.jpg face`
+`python -m lenssort examples/example1.jpg -m face`
 
-![example1_face_i_a90](/examples/example1_face.png)
-
-
-`python -m lenssort examples/example1.jpg face -i -a 90`
-
-![example1_face_i_a90](/examples/example1_face_i_a90.png)
+![example1_face_i_a90](/examples/results/example1_face.png)
 
 
-`python -m lenssort examples/example1.jpg eyes -i`
+`python -m lenssort examples/example1.jpg -m face -i -a 90`
 
-![example1_eyes_i](/examples/example1_eyes_i.png)
-
-
-`python -m lenssort examples/example3.jpg facemask`
-
-![example1_eyes_i](/examples/example3_facemask.png)
+![example1_face_i_a90](/examples/results/example1_face_i_a90.png)
 
 
-`python -m lenssort examples/example3.jpg shuffle`
+`python -m lenssort examples/example1.jpg -m eyes -i`
 
-![example1_eyes_i](/examples/example3_shuffle.png)
+![example1_eyes_i](/examples/results/example1_eyes_i.png)
 
 
-`python -m lenssort examples/example2.jpg censored`
+`python -m lenssort examples/example3.jpg -m facemask`
 
-![example1_eyes_i](/examples/example2_censored.png)
+![example1_eyes_i](/examples/results/example3_facemask.png)
+
+
+`python -m lenssort examples/example3.jpg -m shuffle`
+
+![example1_eyes_i](/examples/results/example3_shuffle.png)
+
+
+`python -m lenssort examples/example2.jpg -m censored`
+
+![example1_eyes_i](/examples/results/example2_censored.png)
 
 ### Todo
 - [ ] Expose pixelsort args: sorting function, interval function, etc.

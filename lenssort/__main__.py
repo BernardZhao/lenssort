@@ -1,4 +1,4 @@
-from lenssort.main import lensesort
+from lenssort.main import lenssort
 from lenssort.masks import mask_types
 import argparse
 
@@ -25,7 +25,7 @@ def parse_arguments():
 
 args = parse_arguments()
 output_path = args.pop("output")
-result = gltch(**args)
+result = lenssort(**args)
 if output_path:
     result.save(output_path)
 else:
